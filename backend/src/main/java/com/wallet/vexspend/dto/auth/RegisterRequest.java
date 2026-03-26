@@ -1,30 +1,45 @@
-﻿package com.wallet.vexspend.dto.auth;
+package com.wallet.vexspend.dto.auth;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
-public record RegisterRequest(
-        @NotBlank
-        @Size(min = 3, max = 60)
-        @Pattern(regexp = "^[a-zA-Z0-9._-]+$", message = "Username contains invalid characters")
-        String username,
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class RegisterRequest {
 
-        @NotBlank
-        @Email
-        @Size(max = 150)
-        String email,
+    @NotBlank
+    @Size(min = 3, max = 60)
+    @Pattern(regexp = "^[a-zA-Z0-9._-]+$", message = "Username contains invalid characters")
+    private String username;
 
-        @NotBlank
-        @Size(min = 8, max = 72)
-        @Pattern(
-                regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).+$",
-                message = "Password must contain upper, lower, digit and special character"
-        )
-        String password
-) {
+    @NotBlank
+    @Email
+    @Size(max = 150)
+    private String email;
+
+    @NotBlank
+    @Size(min = 8, max = 72)
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).+$",
+            message = "Password must contain upper, lower, digit and special character")
+    private String password;
+
+    public String username() {
+        return username;
+    }
+
+    public String email() {
+        return email;
+    }
+
+    public String password() {
+        return password;
+    }
 }
-
-
-

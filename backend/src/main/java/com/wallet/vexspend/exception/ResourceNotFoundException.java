@@ -1,4 +1,4 @@
-﻿package com.wallet.vexspend.exception;
+package com.wallet.vexspend.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

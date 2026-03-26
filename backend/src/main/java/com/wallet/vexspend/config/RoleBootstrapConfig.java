@@ -1,4 +1,4 @@
-﻿package com.wallet.vexspend.config;
+package com.wallet.vexspend.config;
 
 import com.wallet.vexspend.entity.Role;
 import com.wallet.vexspend.entity.RoleName;

@@ -1,4 +1,4 @@
-﻿package com.wallet.vexspend.service;
+package com.wallet.vexspend.service;
 
 import com.wallet.vexspend.dto.UserProfileResponse;
 import com.wallet.vexspend.dto.user.UpdateMyProfileRequest;
@@ -9,7 +9,6 @@ import com.wallet.vexspend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.Locale;
 import java.util.UUID;
 

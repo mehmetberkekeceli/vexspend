@@ -1,11 +1,11 @@
-﻿package com.wallet.vexspend.service;
+package com.wallet.vexspend.service;
 
 import com.wallet.vexspend.dto.UserProfileResponse;
 import com.wallet.vexspend.entity.AppUser;
 import org.springframework.stereotype.Component;
-
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class UserProfileMapper {
@@ -14,7 +14,7 @@ public class UserProfileMapper {
         List<String> roles = user.getRoles().stream()
                 .map(role -> role.getName().name())
                 .sorted(Comparator.naturalOrder())
-                .toList();
+                .collect(Collectors.toList());
 
         return new UserProfileResponse(
                 user.getId(),
@@ -29,4 +29,5 @@ public class UserProfileMapper {
         );
     }
 }
+
 

@@ -1,4 +1,4 @@
-﻿package com.wallet.vexspend.security;
+package com.wallet.vexspend.security;
 
 import com.wallet.vexspend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

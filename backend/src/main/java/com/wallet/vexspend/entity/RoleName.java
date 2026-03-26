@@ -1,4 +1,4 @@
-﻿package com.wallet.vexspend.entity;
+package com.wallet.vexspend.entity;
 
 public enum RoleName {
     ROLE_USER,

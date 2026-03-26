@@ -1,12 +1,14 @@
-﻿package com.wallet.vexspend.security.jwt;
+package com.wallet.vexspend.security.jwt;
 
 import com.wallet.vexspend.security.UserPrincipal;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.oauth2.jose.jws.JwsHeader;
 import org.springframework.security.oauth2.jose.jws.MacAlgorithm;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
+import org.springframework.security.oauth2.jwt.JwsHeader;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -43,8 +45,18 @@ public class JwtTokenService {
         return new JwtToken(tokenValue, expiresAt);
     }
 
-    public record JwtToken(String accessToken, Instant expiresAt) {
+    @Getter
+    @AllArgsConstructor
+    public static class JwtToken {
+        private final String accessToken;
+        private final Instant expiresAt;
+
+        public String accessToken() {
+            return accessToken;
+        }
+
+        public Instant expiresAt() {
+            return expiresAt;
+        }
     }
 }
-
-

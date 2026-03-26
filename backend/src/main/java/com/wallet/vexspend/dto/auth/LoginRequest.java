@@ -1,15 +1,34 @@
-﻿package com.wallet.vexspend.dto.auth;
+package com.wallet.vexspend.dto.auth;
 
-import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import javax.validation.constraints.NotBlank;
 
-public record LoginRequest(
-        @NotBlank
-        String usernameOrEmail,
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class LoginRequest {
 
-        @NotBlank
-        String password
-) {
+    @NotBlank
+    private String usernameOrEmail;
+
+    @NotBlank
+    private String password;
+
+    public String usernameOrEmail() {
+        return usernameOrEmail;
+    }
+
+    public String password() {
+        return password;
+    }
+
 }
+
+
 
 
 

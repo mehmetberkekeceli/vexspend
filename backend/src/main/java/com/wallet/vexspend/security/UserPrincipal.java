@@ -1,10 +1,9 @@
-﻿package com.wallet.vexspend.security;
+package com.wallet.vexspend.security;
 
 import com.wallet.vexspend.entity.AppUser;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.Collection;
 import java.util.Set;
 import java.util.UUID;

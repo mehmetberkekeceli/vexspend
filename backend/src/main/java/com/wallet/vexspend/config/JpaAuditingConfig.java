@@ -1,4 +1,4 @@
-﻿package com.wallet.vexspend.config;
+package com.wallet.vexspend.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

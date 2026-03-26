@@ -1,4 +1,4 @@
-﻿package com.wallet.vexspend.service;
+package com.wallet.vexspend.service;
 
 import com.wallet.vexspend.dto.auth.AuthResponse;
 import com.wallet.vexspend.dto.auth.LoginRequest;
@@ -19,9 +19,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
+import java.util.Collections;
 import java.util.Locale;
-import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -53,7 +52,7 @@ public class AuthService {
                 .username(username)
                 .email(email)
                 .passwordHash(passwordEncoder.encode(request.password()))
-                .roles(Set.of(defaultRole))
+                .roles(Collections.singleton(defaultRole))
                 .enabled(true)
                 .build();
 

@@ -1,8 +1,7 @@
-﻿package com.wallet.vexspend.repository;
+package com.wallet.vexspend.repository;
 
 import com.wallet.vexspend.entity.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.Optional;
 import java.util.UUID;
 

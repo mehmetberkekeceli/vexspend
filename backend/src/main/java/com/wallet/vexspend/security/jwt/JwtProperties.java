@@ -1,7 +1,7 @@
-﻿package com.wallet.vexspend.security.jwt;
+package com.wallet.vexspend.security.jwt;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -22,5 +22,6 @@ public class JwtProperties {
     @Min(5)
     private long accessTokenMinutes = 60;
 }
+
 
 
